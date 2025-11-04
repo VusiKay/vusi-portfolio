@@ -1,4 +1,5 @@
-import cardsImg from '/src/assets/portfolioImage.jpg';
+import cardsImg from '../assets/PortfolioImage.jpg';
+
 import Header from '/src/Components/Layout/Header.jsx'
 import Footer from '/src/Components/Layout/Footer.jsx'
 
