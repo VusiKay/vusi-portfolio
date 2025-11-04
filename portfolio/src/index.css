@@ -1,196 +1,286 @@
-body{
-  margin: 0;
-  padding: 0;
-  background-color: #141313;
-  color: azure;
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Catamaran', sans-serif;
+  --font-alt: 'Montserrat', sans-serif;
+  --primary-color: #009688;
 }
-.header-container{
-  background-color: aqua;
+
+/* reset */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; padding: 0;  }
+
+/* hero */
+.hero {
+  width: 98vw;
+  height: 100vh;       /* full viewport height */
+  position: relative;
+  overflow: hidden;    /* hide any overflow from image scaling */
+}
+
+/* image */
+.hero-img {
+  width: 100%;           /* fill container width */
+  height: 112%;          /* match container height */
+  object-fit: cover;     /* crop to fill without distortion */
+  display: block;  
+  margin-top: -5rem;      /* remove inline spacing */
+}
+
+.header-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: rgba(7, 7, 7, 0.993);
+  box-shadow: 0 6px 5px rgba(25, 40, 68, 0.336);
+
+  position: fixed; /* sticks to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* stays above content */
+}
+
+/* Push down the content so it doesn't go under the header */
+main, .projects-page, .page-content {
+  padding-top: 60px; /* same as header height */
+}
+
+
+.logo{
+  font-family: var(--font-body);
+ margin-left: 50px;
+  font-size: 1.8rem;
+  color: var(--primary-color);
   
+ 
 }
 
-ul {
-list-style: none;
-display: flex;
-
+.links-container{
+ 
+  margin-left: 650px;
 }
 
-.menu-link a{
-  display: flex;
-  margin-right: 30px;
-  color: red;
+/* remove link under logo */
+.logo-link{
   text-decoration: none;
-  font-family:  'Arial Narrow', Arial, sans-serif;
 }
 
-.menu-link a:hover{
-  color: blue;
+.menu-links{
+  margin-left: 30px;
+  font-size: 1.4rem;
+  font-family: var(--font-body);
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-ul .logo{
-  display: flex;
-  margin-right: 790px;
-  font-size: .8em;
+.menu-links:hover{
+  color: wheat;
+  text-decoration: underline;
+  text-underline-offset: 10px; /*  space between text and underline */
   
-  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+.main-content{
+  display: flex;
+  
+  font-family: var(--font-body);
+font-size: 1.4rem;
+  
+  margin: 120px 20px 12px 10px;
+}
+
+.about-container{
+  display: flex;
+  
+  font-family: var(--font-body);
+font-size: 1.4rem;
+  
+  margin: 40px 20px 12px 10px;
+}
+
+.intro-txt{
+  color: rgb(8, 8, 8);
+  font-weight: 300;
+  padding-left: 50px;
+  
+}
+
+.header-txt{
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  color: #009688;
+  margin-left: 500px;
+  margin-top: 100px;
+}
+
+
+
+.my-journey{
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-left: 500px;
+  margin-top: 50px;
+}
+
+
+.journey-txt {
+  background-color: #f4f7f62c;
+  font-weight: 100;
+  margin-right: 50px;
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  margin-left: 50px;
+  padding: 80px;
+  box-shadow: 0 6px 18px rgba(25, 40, 68, 0.336);
+}
+
+.beyond-the-screen {
+  background-color: #b8e6d62c;
+  font-weight: 100;
+  margin-right: 50px;
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  margin-left: 50px;
+  padding: 80px;
+  box-shadow: 0 6px 18px rgba(25, 40, 68, 0.336);
+}
+
+.introduction-txt{
+  color: rgb(8, 8, 8);
+  font-weight: 300;
+  padding-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  
+}
+
+.name-txt{
+  font-weight: 500;
+  color: #009688;
+font-size: 1.8rem;
+}
+
+.home-card-img{
+  padding-left: 50px;
+  padding-bottom: 50px;
+  height: 500px;
+  width: 700px;
+}
+
+.my-image{
+   box-shadow: 0 6px 18px rgba(12, 18, 30, 0.692);
+  margin-left: 50px ;
+ 
+  height: 280px;
+  width: 290px;
+  margin-top: 50px;
+  
+}
+
+.selected-work-txt h2{
+  margin: 50px 0 0 30.9rem;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  color: #009688;
+}
+.selected-work-txt p{
+  margin: 3.5rem 0 3rem 9rem;
+  font-size: 1.8rem;
+  font-family: var(--font-body);
+  color: rgb(8, 8, 8);
+}
+
+
+
+
+.skills-section {
+  padding: 20px 0;
+  background-color: #f9fafb;
+  margin-top: 80px;
+}
+
+.skills-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  
+}
+
+.skill-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f5f8ff, #eaf2ff);
+}
+
+.skill-card .icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: #3b82f6; /* blue accent */
+}
+
+.skill-card .title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #009688;
+  margin-bottom: 10px;
+  font-family: var(--font-heading);
+}
+
+.skill-card .desc {
+  color: #56634b;        /* white text for contrast */
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+
+
+
+
+.thumbnail{
+  width: 420px;
+  height: 310px;
 }
 
 .footer{
   display: flex;
-  margin-top: 500px;
-  scroll-behavior: none;
   justify-content: center;
-  font-family:  'Arial Narrow', Arial, sans-serif;
-  color: red;
-  background-color: aqua;
-
-}
-
-.hero-container{
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 200px;
-  color: rgb(227, 227, 243);
   background-color: black;
-  font-family:  monospace;
+  height: 50px;
+  color: white;
+  font-size: 1.5rem;
+  font-family: var(--font-body);
   
-}
-
-.body-container{
-  display: flex;
-  justify-content: center;
-  font-family:  'Arial Narrow', Arial, sans-serif;
-  color:aqua;
-  padding-top: 50px;
-}
-
-.span-text{
-  font-size: 1.5em;
-  color:aqua;
   
-}
-
-.span-name{
- color:rgb(65, 163, 163);
- margin-left: 100px; 
- line-height: 80px;
- 
-}
-
-
-.connect-btn{
-  margin-top: 13px;
-  border: 1px solid;
-  border-radius: 50px;
-  margin-left:400px;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: aqua;
-  background-color: #020505;
-  border-color: rgb(164, 230, 230);
-  cursor: pointer;
-}
-
-.resume-btn{
-  border: 1px solid;
-  border-radius: 50px;
-  margin-left:10px;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: aqua;
-  background-color: #020505;
-  border-color: rgb(164, 230, 230);
-  cursor: pointer;
-}
-
-.connect-btn:hover{
-  background-color: rgb(164, 230, 230);
-  color: black;
-}
-.resume-btn:hover{
-  background-color: rgb(164, 230, 230);
-  color: black;
-}
-
-.profile-container img{
-  width: 400px;
-  height: 300px;
-  padding-top: 16px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.profile-container{
-  display: flex;
-
-  
-  margin-top: 10px;
-  
-}
-
-.profile-container p{
- 
-padding-left: 20px;
-  padding-right: 20px ;
-  margin-top: 15px;
-  font-family:   Arial, sans-serif;
-  
-}
-.about-me-txt{
-display: flex;
-
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-
-
-  /* color: red; */
- /*  background-color: rgb(0, 174, 255); */
-}
-
-.service-heading{
-  display: flex;
-  justify-content: center;
-  color:aqua;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.services-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 80px;
-  margin-top: 50px;
-  padding: 10px 80px 10px 80px;
-  
-  color:aqua;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.about-skills{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-/*   border: 2px solid rgb(38, 0, 255); */
-  margin-top: 10px;
-}
-
-.web{
-  display: flex;
-  justify-content: center;
-  border: 2px solid aqua;
-  line-height: 200px;
-  border-radius: 10px;
-  color: azure;
-}
-
-.web:hover{
-  cursor: pointer;
-  background-color: #28e0f8;
-  color: #020505;
-  /* background-image: url(./assets/background.jpg);
-  width: 100%;
-  height: 100%;
-  object-fit: cover; */
 }

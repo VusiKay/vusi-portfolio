@@ -7,18 +7,48 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node modules
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Environment variables (⚠️ contains EmailJS keys)
+.env
+.env.local
+.env.*.local
+
+# Local configuration
 *.local
 
-# Editor directories and files
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor settings
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Vite cache
+.vite/
+
+# Dependency directories (in case)
+jspm_packages/
+
+# Optional: design files (uncomment if you don’t want to push raw design exports)
+# *.psd
+# *.ai
+# *.fig
+
+# Optional: temporary exports or screenshots
+# *.zip
+# *.bak
+# *.tmp
